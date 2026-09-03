@@ -1,0 +1,1 @@
+Next.js 14 App Router + React 18, Tailwind CSS, TypeScript; zero external database dependencies — custom JSON-file store with atomic rename writes; authentication via Node `crypto.scrypt` and HMAC-signed httpOnly cookies; optional OpenAI provider selected at runtime through an abstraction layer.

@@ -1,0 +1,6 @@
+- Every route handler delegates business logic to a `lib/` repo function rather than embedding queries or AI calls inline, keeping routes thin and testable.
+- All data mutations go through `db.transaction()` so multiple related inserts/updates commit atomically and roll back on error.
+- Ownership is enforced server-side by always including `user_id` in every `where` clause (e.g. `db.get('boards', { id, user_id })`), never trusting client-supplied IDs alone.
+- Long-lived strings from user input are truncated with `.slice(0, N)` before insertion (question text, content, style_json, meta_json, etc.) to bound storage size.
+- The AI layer is accessed only through `getAIProvider()` which returns a single cached `AIProvider`; concrete vendors are never imported directly by callers.
+- Domain state machines are expressed as discriminated union string literals in `lib/types.ts` (SessionState, ConceptStatus, Ownership, ErrorCategory) and consumed everywhere instead of ad-hoc strings.

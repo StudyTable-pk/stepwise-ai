@@ -1,0 +1,1 @@
+A Next.js full-stack learning environment that turns student questions into interactive board-based sessions with AI evaluation, adaptive hints, and a longitudinal learning journey.
