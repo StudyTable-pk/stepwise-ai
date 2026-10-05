@@ -456,7 +456,7 @@ export default function SessionPage() {
   }
 
   // --- Render ------------------------------------------------------------------
-  if (loadError) {
+    if (loadError) {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-md w-full space-y-4">
@@ -465,6 +465,14 @@ export default function SessionPage() {
             ← Back to Home
           </Link>
         </div>
+      </div>
+    );
+  }
+
+  if (!payload) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Spinner label="Opening your Board..." />
       </div>
     );
   }
