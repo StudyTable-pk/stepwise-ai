@@ -8,10 +8,6 @@ import Shell from "@/components/Shell";
 import { Card, Badge, Alert, Spinner } from "@/components/ui";
 import type { FinalReport } from "@/lib/types";
 
-export async function generateStaticParams() {
-  return [];
-}
-
 function formatDuration(seconds: number) {
   if (!seconds || seconds < 0) return "0 min";
   const m = Math.floor(seconds / 60);
