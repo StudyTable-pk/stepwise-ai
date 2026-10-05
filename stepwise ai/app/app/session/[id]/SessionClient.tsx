@@ -509,7 +509,6 @@ export default function SessionPage() {
     >
       <span aria-hidden>{icon}</span> <span className="hidden lg:inline">{label}</span>
     </button>
-  );
 
   return (
     <div className="h-screen flex flex-col bg-ink-50 dark:bg-ink-950">
