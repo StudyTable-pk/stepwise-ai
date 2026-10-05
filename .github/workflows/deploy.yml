@@ -21,7 +21,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: stepwise ai/App
+        working-directory: stepwise ai/app
 
     steps:
       - name: Checkout
@@ -46,7 +46,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "stepwise ai/App/out"
+          path: "stepwise ai/app/out"
 
   deploy:
     environment:
